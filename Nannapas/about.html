@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!--Menu-->
+<div id="menu-container"></div>
+
+    <div class="container">
+    <h4 class="alert alert-success mt4 col-md-6">ข้อมูลเกี่ยวกับเรา</h4>
+    <div class="row">
+    <div class="col-md-6">
+    
+    <p class="text-primary">ชลบุรี</p><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995023.3696561282!2d100.52379117853056!3d13.047760451161617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b01783eb103f%3A0x290e915f51ddfd1f!2z4LiK4Lil4Lia4Li44Lij4Li1!5e0!3m2!1sth!2sth!4v1788717611989!5m2!1sth!2sth" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+
+<div class="col">
+    <div class="col-md-6">
+     <div class="h4 text-success fw-bold">
+    <p class="text-primary">สุนัขพันธุ์ไหนน่าเลี้ยงที่สุด</p>
+     </div>   
+ <br>
+<img src="image/dog4.jpg" width="600 " height="500">
+    </div>
+    สุนัขพันธุ์เล็กสำหรับเลี้ยงในคอนโด
+    พุดเดิ้ลทอย (Toy Poodle): ฉลาด ฝึกง่าย ตัวเล็ก ขนไม่ค่อยร่วง
+    ปอมเมอเรเนียน (Pomeranian): น่ารัก ขี้อ้อน ตัวเล็กกะทัดรัด
+    ชิสุ (Shih Tzu): รักสงบ เป็นมิตร เข้ากับคนง่าย 
+
+    AP Thai
+    สุนัขพันธุ์ใหญ่ใจดีสำหรับคนมีพื้นที่
+    โกลเด้น รีทรีฟเวอร์ (Golden Retriever): เป็นมิตร รักเจ้าของ เข้ากับเด็กได้ดี
+    ลาบราดอร์ รีทรีฟเวอร์ (Labrador Retriever): ฉลาด ร่าเริง แข็งแรง
+
+</body>
+</html>
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/menu.js" ></script>
+
+<script>
+   // โหลด menu1.js
+   fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+
+            // ✅ re-bind toggle หลังจากเมนูถูก inject
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                });
+            }
+        });
+
+
+
+
+
+</script>
