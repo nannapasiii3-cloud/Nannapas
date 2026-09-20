@@ -37,30 +37,12 @@
     โกลเด้น รีทรีฟเวอร์ (Golden Retriever): เป็นมิตร รักเจ้าของ เข้ากับเด็กได้ดี
     ลาบราดอร์ รีทรีฟเวอร์ (Labrador Retriever): ฉลาด ร่าเริง แข็งแรง
 
+</div>
+    <!--footer-->
+  <div id="footer"></div>
+  
 </body>
 </html>
 <script src="js/bootstrap.bundle.min.js" ></script>
 <script src="js/menu.js" ></script>
 
-<script>
-   // โหลด menu1.js
-   fetch("menu.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("menu-container").innerHTML = data;
-
-            // ✅ re-bind toggle หลังจากเมนูถูก inject
-            const sidebarToggle = document.body.querySelector('#sidebarToggle');
-            if (sidebarToggle) {
-                sidebarToggle.addEventListener('click', event => {
-                    event.preventDefault();
-                    document.body.classList.toggle('sb-sidenav-toggled');
-                });
-            }
-        });
-
-
-
-
-
-</script>

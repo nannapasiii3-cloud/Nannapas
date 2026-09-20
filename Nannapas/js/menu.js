@@ -1,24 +1,36 @@
-<script src="js/bootstrap.bundle.min.js" ></script>
 
-<script>
-   // โหลด menu1.js
-   fetch("menu.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("menu-container").innerHTML = data;
+  // โหลด menu1.js
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu-container").innerHTML = data;
 
-            // ✅ re-bind toggle หลังจากเมนูถูก inject
-            const sidebarToggle = document.body.querySelector('#sidebarToggle');
-            if (sidebarToggle) {
-                sidebarToggle.addEventListener('click', event => {
-                    event.preventDefault();
-                    document.body.classList.toggle('sb-sidenav-toggled');
-                });
-            }
+      // ✅ re-bind toggle หลังจากเมนูถูก inject
+      const sidebarToggle = document.body.querySelector('#sidebarToggle');
+      if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', event => {
+          event.preventDefault();
+          document.body.classList.toggle('sb-sidenav-toggled');
         });
+      }
+    });
 
 
 
+  // โหลด footer
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+
+      // ✅ re-bind toggle หลังจากเมนูถูก inject
+      const sidebarToggle = document.body.querySelector('#sidebarToggle');
+      if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', event => {
+          event.preventDefault();
+          document.body.classList.toggle('sb-sidenav-toggled');
+        });
+      }
+    });
 
 
-</script>
